@@ -1,0 +1,21 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'RITS.Name'}}"/></h1>
+        </div>
+    </header>
+    
+    {{!-- Sheet Body --}}
+    <section class="sheet-body flex-vertical flex">
+      {{{editable-textarea "data.description" "Description" false true data.description item.id this}}}
+      <label class="label-stripe">{{localize "RITS.Class"}}</label>
+      <input id="item-class" type="text" name="data.class" value="{{data.class}}">
+      {{#if isGM}}
+        <div class="label-stripe">{{localize "RITS.Logic"}}</div>
+        <textarea name="data.logic">{{{data.logic}}}</textarea>
+        <div class="label-stripe">{{localize "RITS.Effects"}}</div>
+        <div id="effects">{{> "systems/runners-in-the-shadows/templates/parts/active-effects.html"}}</div>
+      {{/if}}
+    </section>
+</form>

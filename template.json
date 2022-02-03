@@ -1,47 +1,74 @@
 {
   "Actor": {
-  "types": ["character", "npc", "crew", "\uD83D\uDD5B clock", "factions"],
-  "character": {
-    "alias": "",
-    "look": "",
-    "heritage": "",
-    "lineage": "",
-    "background": "",
-    "background-details": "",
-    "vice": "",
-    "vice-purveyor": "",
-    "idn-status": "",
-    "idn-issuer": "",
-    "playbook": "",
-    "acquaintances": [],
-    "acquaintances_label": "RITS.Acquaintances",
-    "edge": {
-      "value": [0],
-      "max": 9,
-      "max_default": 9,
-      "name_default": "RITS.Edge",
-      "name": "RITS.Edge"
-    },
-    "trauma": {
-      "max": 4,
-      "max_default": 4,
-      "value": [0],
-      "name": "RITS.Trauma",
-      "name_default": "RITS.Trauma",
-      "options": ["cold", "haunted", "obsessed", "paranoid", "reckless", "soft", "unstable", "vicious"],
-      "list": []
-    },
-    "healing-clock": [0],
-    "experience": [0],
-    "experience_max": 8,
-    "nuyen": [0],
-    "nuyen_stashed": [0],
-    "special_abilities": [],
-    "loadout": 0,
-    "load_level": "",
-    "selected_load_level": "",
-    "base_max_load": 0,
-    "harm": {
+    "types": [
+      "character",
+      "npc",
+      "crew",
+      "\uD83D\uDD5B clock",
+      "factions"
+    ],
+    "character": {
+      "alias": "",
+      "look": "",
+      "heritage": "",
+      "lineage": "",
+      "background": "",
+      "background-details": "",
+      "vice": "",
+      "vice-purveyor": "",
+      "idn-status": "",
+      "idn-issuer": "",
+      "playbook": "",
+      "acquaintances": [],
+      "acquaintances_label": "RITS.Acquaintances",
+      "edge": {
+        "value": [
+          0
+        ],
+        "max": 9,
+        "max_default": 9,
+        "name_default": "RITS.Edge",
+        "name": "RITS.Edge"
+      },
+      "trauma": {
+        "max": 4,
+        "max_default": 4,
+        "value": [
+          0
+        ],
+        "name": "RITS.Trauma",
+        "name_default": "RITS.Trauma",
+        "options": [
+          "cold",
+          "haunted",
+          "obsessed",
+          "paranoid",
+          "reckless",
+          "soft",
+          "unstable",
+          "vicious"
+        ],
+        "list": []
+      },
+      "healing-clock": [
+        0
+      ],
+      "experience": [
+        0
+      ],
+      "experience_max": 8,
+      "nuyen": [
+        0
+      ],
+      "nuyen_stashed": [
+        0
+      ],
+      "special_abilities": [],
+      "loadout": 0,
+      "load_level": "",
+      "selected_load_level": "",
+      "base_max_load": 0,
+      "harm": {
         "light": {
           "one": "",
           "two": ""
@@ -56,13 +83,13 @@
         "deadly": {
           "one": ""
         }
-    },
-    "armor-uses": {
-      "armor": 0,
-      "heavy": 0,
-      "special": 0
-    },
-   "attributes": {
+      },
+      "armor-uses": {
+        "armor": 0,
+        "heavy": 0,
+        "special": 0
+      },
+      "attributes": {
         "intuition": {
           "exp": 0,
           "exp_max": 6,
@@ -147,37 +174,58 @@
             }
           }
         }
-    }
-  },
-  "crew": {
-    "name": "",
-    "reputation": [0],
-    "lair": "",
-    "tier": [0],
-    "deity": "",
-    "hold": ["strong"],
-    "experience": [0],
-    "hold_types": ["weak", "strong"],
-    "nuyen": {
-      "max": 4,
-      "value": [0]
+      }
     },
-    "vault": {
-      "value": [0],
-      "max": 0
+    "crew": {
+      "name": "",
+      "reputation": [
+        0
+      ],
+      "lair": "",
+      "tier": [
+        0
+      ],
+      "deity": "",
+      "hold": [
+        "strong"
+      ],
+      "experience": [
+        0
+      ],
+      "hold_types": [
+        "weak",
+        "strong"
+      ],
+      "nuyen": {
+        "max": 4,
+        "value": [
+          0
+        ]
+      },
+      "vault": {
+        "value": [
+          0
+        ],
+        "max": 0
+      },
+      "turfs": [
+        8
+      ],
+      "features": [],
+      "heat": [
+        0
+      ],
+      "wanted": [
+        0
+      ]
     },
-    "turfs": [8],
-    "features": [],
-    "heat": [0],
-    "wanted": [0]
-  },
-  "\uD83D\uDD5B clock": {
-    "name": "",
-    "type": 4,
-    "value": "0"
-  },
+    "\uD83D\uDD5B clock": {
+      "name": "",
+      "type": 4,
+      "value": "0"
+    },
     "factions": {
-	"name": ""
+      "name": ""
     },
     "npc": {
       "name": "",
@@ -190,7 +238,23 @@
     }
   },
   "Item": {
-    "types": ["faction", "item", "class", "ability", "heritage", "lineage", "background", "vice", "crew_upgrade", "cohort", "crew_type", "crew_reputation", "crew_upgrade", "crew_ability"],
+    "types": [
+      "faction",
+      "item",
+      "class",
+      "ability",
+      "heritage",
+      "lineage",
+      "background",
+      "vice",
+      "crew_upgrade",
+      "cohort",
+      "crew_type",
+      "crew_reputation",
+      "crew_upgrade",
+      "crew_ability",
+      "tradition"
+    ],
     "templates": {
       "default": {
         "description": ""
@@ -239,7 +303,9 @@
       }
     },
     "faction": {
-      "templates": ["default"],
+      "templates": [
+        "default"
+      ],
       "type": "",
       "tier": 0,
       "goal_1": "",
@@ -256,14 +322,18 @@
       "goal_clock": 0,
       "notes": "",
       "hold": {
-        "value": [1],
+        "value": [
+          1
+        ],
         "max": 2,
         "max_default": 2,
         "name_default": "RITS.Hold",
         "name": "RITS.Hold"
       },
       "status": {
-        "value": [4],
+        "value": [
+          4
+        ],
         "max": 7,
         "max_default": 7,
         "name_default": "RITS.Status",
@@ -271,268 +341,341 @@
       }
     },
     "item": {
-    "templates": ["default", "logic", "activatedEffect"],
-    "class": "",
-    "load": 0,
-    "equipped" : false
-  },
-  "class": {
-    "templates": ["default", "logic", "activatedEffect"],
-    "experience_clues": "",
-    "base_skills": {
-      "engineer": [0],
-      "interface": [0],
-      "stalk": [0],
-      "survey": [0],
-      "fight": [0],
-      "finesse": [0],
-      "prowl": [0],
-      "wreck": [0],
-      "command": [0],
-      "consort": [0],
-      "influence": [0],
-      "study": [0]
-    }
-  },
-  "ability": {
-    "templates": ["ability", "logic", "activatedEffect"]
-  },
-  "heritage": {
-    "templates": ["default", "activatedEffect"]
-  },
-  "lineage": {
-  "templates": ["default", "activatedEffect"]
-  },
-  "background": {
-    "templates": ["default", "activatedEffect"]
-  },
-  "vice": {
-    "templates": ["default", "activatedEffect"]
-  },
-  "cohort": {
-    "templates": ["default"],
-    "cohort": ["Team"],
-    "scale": 0,
-    "quality": 0,
-    "cohort_list": {
-      "Team": {
-        "label": "RITS.Team"
-      },
-      "Expert": {
-        "label": "RITS.Expert"
+      "templates": [
+        "default",
+        "logic",
+        "activatedEffect"
+      ],
+      "class": "",
+      "load": 0,
+      "equipped": false
+    },
+    "class": {
+      "templates": [
+        "default",
+        "logic",
+        "activatedEffect"
+      ],
+      "experience_clues": "",
+      "base_skills": {
+        "engineer": [
+          0
+        ],
+        "interface": [
+          0
+        ],
+        "stalk": [
+          0
+        ],
+        "survey": [
+          0
+        ],
+        "fight": [
+          0
+        ],
+        "finesse": [
+          0
+        ],
+        "prowl": [
+          0
+        ],
+        "wreck": [
+          0
+        ],
+        "command": [
+          0
+        ],
+        "consort": [
+          0
+        ],
+        "influence": [
+          0
+        ],
+        "study": [
+          0
+        ]
       }
     },
-    "team_type": ["Technicians"],
-    "team_type_list": {
-      "Operatives": {
-        "label": "RITS.TeamTypeOperatives",
-        "description": "RITS.TeamTypeOperativesDescription"
+    "ability": {
+      "templates": [
+        "ability",
+        "logic",
+        "activatedEffect"
+      ]
+    },
+    "heritage": {
+      "templates": [
+        "default",
+        "activatedEffect"
+      ]
+    },
+    "lineage": {
+      "templates": [
+        "default",
+        "activatedEffect"
+      ]
+    },
+    "background": {
+      "templates": [
+        "default",
+        "activatedEffect"
+      ]
+    },
+    "vice": {
+      "templates": [
+        "default",
+        "activatedEffect"
+      ]
+    },
+    "cohort": {
+      "templates": [
+        "default"
+      ],
+      "cohort": [
+        "Team"
+      ],
+      "scale": 0,
+      "quality": 0,
+      "cohort_list": {
+        "Team": {
+          "label": "RITS.Team"
+        },
+        "Expert": {
+          "label": "RITS.Expert"
+        }
       },
-      "Technicians": {
-        "label": "RITS.TeamTypeTechnicians",
-        "description": "RITS.TeamTypeTechniciansDescription"
+      "team_type": [
+        "Technicians"
+      ],
+      "team_type_list": {
+        "Operatives": {
+          "label": "RITS.TeamTypeOperatives",
+          "description": "RITS.TeamTypeOperativesDescription"
+        },
+        "Technicians": {
+          "label": "RITS.TeamTypeTechnicians",
+          "description": "RITS.TeamTypeTechniciansDescription"
+        },
+        "Thieves": {
+          "label": "RITS.TeamTypeThieves",
+          "description": "RITS.TeamTypeThievesDescription"
+        },
+        "Thugs": {
+          "label": "RITS.TeamTypeThugs",
+          "description": "RITS.TeamTypeThugsDescription"
+        },
+        "Transporters": {
+          "label": "RITS.TeamTypeTransporters",
+          "description": "RITS.TeamTypeTransportersDescription"
+        },
+        "Weirdos": {
+          "label": "RITS.TeamTypeWeirdos",
+          "description": "RITS.TeamTypeWeirdosDescription"
+        }
       },
-      "Thieves": {
-        "label": "RITS.TeamTypeThieves",
-        "description": "RITS.TeamTypeThievesDescription"
+      "expert_type": "",
+      "status": [],
+      "statuses": [],
+      "edges": [],
+      "edges_list": {
+        "Fearsome": {
+          "label": "RITS.EdgesFearsome",
+          "description": "RITS.EdgesFearsomeDescription",
+          "selected": false
+        },
+        "Independent": {
+          "label": "RITS.EdgesIndependent",
+          "description": "RITS.EdgesIndependentDescription",
+          "selected": false
+        },
+        "Loyal": {
+          "label": "RITS.EdgesLoyal",
+          "description": "RITS.EdgesLoyalDescription",
+          "selected": false
+        },
+        "Tenacious": {
+          "label": "RITS.EdgesTenacious",
+          "description": "RITS.EdgesTenaciousDescription",
+          "selected": false
+        }
       },
-      "Thugs": {
-        "label": "RITS.TeamTypeThugs",
-        "description": "RITS.TeamTypeThugsDescription"
+      "flaws": [],
+      "flaws_list": {
+        "Principled": {
+          "label": "RITS.FlawsPrincipled",
+          "description": "RITS.FlawsPrincipledDescription",
+          "selected": false
+        },
+        "Savage": {
+          "label": "RITS.FlawsSavage",
+          "description": "RITS.FlawsSavageDescription",
+          "selected": false
+        },
+        "Unreliable": {
+          "label": "RITS.FlawsUnreliable",
+          "description": "RITS.FlawsUnreliableDescription",
+          "selected": false
+        },
+        "Wild": {
+          "label": "RITS.FlawsWild",
+          "description": "RITS.FlawsWildDescription",
+          "selected": false
+        }
       },
-      "Transporters": {
-        "label": "RITS.TeamTypeTransporters",
-        "description": "RITS.TeamTypeTransportersDescription"
+      "harm": [
+        "No"
+      ],
+      "harm_list": {
+        "No": {
+          "label": "RITS.HarmNoHarm",
+          "description": "RITS.HarmNoHarmDescription",
+          "value": 0
+        },
+        "Weakened": {
+          "label": "RITS.HarmWeakened",
+          "description": "RITS.HarmWeakenedDescription",
+          "value": 1
+        },
+        "Impaired": {
+          "label": "RITS.HarmImpaired",
+          "description": "RITS.HarmImpairedDescription",
+          "value": 2
+        },
+        "Broken": {
+          "label": "RITS.HarmBroken",
+          "description": "RITS.HarmBrokenDescription",
+          "value": 3
+        },
+        "Dead": {
+          "label": "RITS.HarmDead",
+          "description": "RITS.HarmDeadDescription",
+          "value": 4
+        }
       },
-      "Weirdos": {
-        "label": "RITS.TeamTypeWeirdos",
-        "description": "RITS.TeamTypeWeirdosDescription"
+      "armor": false
+    },
+    "crew_reputation": {
+      "templates": [
+        "default"
+      ]
+    },
+    "crew_upgrade": {
+      "templates": [
+        "ability",
+        "logic",
+        "activatedEffect"
+      ],
+      "crew_type": ""
+    },
+    "crew_ability": {
+      "templates": [
+        "ability",
+        "activatedEffect"
+      ]
+    },
+    "crew_type": {
+      "description": "",
+      "experience_clues": "",
+      "turfs": {
+        "1": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "2": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "3": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "4": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "5": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "6": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "7": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "8": {
+          "name": "RITS.SafeHouse",
+          "value": 1,
+          "description": "",
+          "connects": []
+        },
+        "9": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "10": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "11": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "12": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "13": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "14": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        },
+        "15": {
+          "name": "",
+          "value": "",
+          "description": "",
+          "connects": []
+        }
       }
     },
-    "expert_type": "",
-    "status": [],
-    "statuses": [],
-    "edges": [],
-    "edges_list": {
-      "Fearsome": {
-        "label": "RITS.EdgesFearsome",
-        "description": "RITS.EdgesFearsomeDescription",
-        "selected": false
-      },
-      "Independent": {
-        "label": "RITS.EdgesIndependent",
-        "description": "RITS.EdgesIndependentDescription",
-        "selected": false
-      },
-      "Loyal": {
-        "label": "RITS.EdgesLoyal",
-        "description": "RITS.EdgesLoyalDescription",
-        "selected": false
-      },
-      "Tenacious": {
-        "label": "RITS.EdgesTenacious",
-        "description": "RITS.EdgesTenaciousDescription",
-        "selected": false
-      }
-    },
-    "flaws": [],
-    "flaws_list": {
-      "Principled": {
-        "label": "RITS.FlawsPrincipled",
-        "description": "RITS.FlawsPrincipledDescription",
-        "selected": false
-      },
-      "Savage": {
-        "label": "RITS.FlawsSavage",
-        "description": "RITS.FlawsSavageDescription",
-        "selected": false
-      },
-      "Unreliable": {
-        "label": "RITS.FlawsUnreliable",
-        "description": "RITS.FlawsUnreliableDescription",
-        "selected": false
-      },
-      "Wild": {
-        "label": "RITS.FlawsWild",
-        "description": "RITS.FlawsWildDescription",
-        "selected": false
-      }
-    },
-    "harm": ["No"],
-    "harm_list": {
-      "No": {
-        "label": "RITS.HarmNoHarm",
-        "description": "RITS.HarmNoHarmDescription",
-        "value": 0
-      },
-      "Weakened": {
-        "label": "RITS.HarmWeakened",
-        "description": "RITS.HarmWeakenedDescription",
-        "value": 1
-      },
-      "Impaired": {
-        "label": "RITS.HarmImpaired",
-        "description": "RITS.HarmImpairedDescription",
-        "value": 2
-      },
-      "Broken": {
-        "label": "RITS.HarmBroken",
-        "description": "RITS.HarmBrokenDescription",
-        "value": 3
-      },
-      "Dead": {
-        "label": "RITS.HarmDead",
-        "description": "RITS.HarmDeadDescription",
-        "value": 4
-      }
-    },
-    "armor": false
-  },
-  "crew_reputation": {
-    "templates": ["default"]
-  },
-  "crew_upgrade": {
-    "templates": ["ability", "logic", "activatedEffect"],
-    "crew_type": ""
-  },
-  "crew_ability": {
-    "templates": ["ability", "activatedEffect"]
-  },
-  "crew_type": {
-    "description": "",
-    "experience_clues": "",
-    "turfs": {
-      "1": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "2": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "3": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "4": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "5": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "6": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "7": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "8": {
-        "name": "RITS.SafeHouse",
-        "value": 1,
-        "description": "",
-        "connects": []
-      },
-      "9": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "10": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "11": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "12": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "13": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "14": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      },
-      "15": {
-        "name": "",
-        "value": "",
-        "description": "",
-        "connects": []
-      }
+    "tradition": {
+      "templates": [
+        "default",
+        "logic"
+      ],
+      "class": "",
+      "equipped": false
     }
   }
-}
 }
