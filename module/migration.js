@@ -151,7 +151,7 @@ async function _migrateActor(actor) {
       await actor.addPlaybookItems(old_playbook.name);
 
       // Migrate character playbook traditions
-      await actor.addPlaybookItems(old_playbook.name);
+      await actor.addPlaybookTraditions(old_playbook.name);
 
       // Migrate character generic items
       await actor.addGenericItems();

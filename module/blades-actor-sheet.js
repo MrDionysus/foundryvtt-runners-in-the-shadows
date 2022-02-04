@@ -477,6 +477,7 @@ export class BladesActorSheet extends BladesSheet {
     new ContextMenu(html, ".ability-add-popup", this.abilityListContextMenu, {eventName : "click"});
     new ContextMenu(html, ".trauma-item", this.traumaListContextMenu);
     new ContextMenu(html, ".acquaintance", this.acquaintanceContextMenu);
+    new ContextMenu(html, ".tradition", this.traditionContextMenu);
 
     // // todo - remove
     html.find('.migrate-test').click(async ev => {
@@ -539,6 +540,13 @@ export class BladesActorSheet extends BladesSheet {
       let abilityId = checkbox.closest(".ability-block").dataset.abilityId;
       let ability = this.actor.items.get(abilityId);
       return ability.update({data: {purchased : checkbox.checked}});
+    });
+
+    html.find('.tradition-block .main-checkbox').change(ev => {
+      let checkbox = ev.target;
+      let traditionId = checkbox.closest(".tradition-block").dataset.traditionId;
+      let tradition = this.actor.items.get(traditionId);
+      return tradition.update({data: {purchased : checkbox.checked}});
     });
 
     //this could probably be cleaner. Numbers instead of text would be fine, but not much easier, really.
