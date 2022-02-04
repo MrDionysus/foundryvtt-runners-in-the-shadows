@@ -134,6 +134,11 @@ export class BladesActor extends Actor {
         let lineage = item_data.name;
         updateData = {data : { lineage : lineage}};
         break;        
+      //set the character tradition
+      case "tradition":
+        let tradition = item_data.name;
+        updateData = {data : { tradition : tradition}};
+        break;      
     }
 
     //finalize the updated data
@@ -389,6 +394,68 @@ export class BladesActor extends Actor {
   }
 
   /**
+   * Deletes all "tradition" OwnedItems, with an exception for owned "Ghost" traditions, if specified
+   *
+   * @param {boolean} keep_owned_ghost_traditions
+   * @returns {object} // the OwnedItems deleted
+   */
+  async deleteTraditions(what_to_keep, playbook_name){
+    let current_traditions = this.items.filter(item => item.type == "tradition");
+    console.log("%cDeleting unnecessary traditions", "color: orange");
+    let traditions_to_delete = [];
+    // let playbook_name = await BladesHelpers.getPlaybookName(this.data.data.playbook);
+    for(const tradition of current_traditions){
+      let keep = false;
+      switch(what_to_keep){
+        case "all":
+          keep = true;
+          break;
+        case "owned":
+          keep = tradition.data.data.purchased;
+          break;
+        case "custom":
+          keep = await BladesHelpers.checkIfCustom(playbook_name, tradition);
+          console.log(keep, tradition.name);
+          break;
+        case "ghost":
+          keep = tradition.name.includes("Ghost") && tradition.data.data.purchased
+          break;
+        case "none":
+          keep = false;
+          break;
+      }
+      if(!keep){
+        traditions_to_delete.push(tradition.id);
+      }
+    }
+    let deleted;
+    try{
+      deleted = await this.deleteEmbeddedDocuments("Item", traditions_to_delete);
+    }
+    catch(error){
+      console.log("Error deleting traditions: ", error);
+    }
+    return deleted;
+  }
+  
+  /**
+   * Adds playbook-specific "tradition" OwnedItems to an actor
+   *
+   * @param {string} playbook_name
+   * @returns {object} // the OwnedItems added
+   */
+   async addPlaybookTraditions(playbook_name, mark_existing_as_owned){
+    console.log("%cAdding new playbook traditions", "color: green");
+    let all_traditions = await BladesHelpers.getSourcedItemsByType("tradition")
+    // let existing_traditions = this.items.filter(item => item.type == "tradition");
+    let new_playbook_traditions = all_traditions.filter(tradition => tradition.data.data.class == playbook_name);
+
+    let traditions_to_add = BladesHelpers.filterItemsForDuplicatesOnActor(new_playbook_traditions, "tradition", this);
+    let added = await this.createEmbeddedDocuments("Item", traditions_to_add.map(item => item.data), {noHook: true});
+    return added;
+  }
+
+  /**
    * Deletes playbook-specific "item" OwnedItems from an actor
    *
    * @param {string} keep_custom_items
@@ -470,10 +537,6 @@ export class BladesActor extends Actor {
         skillsChanged = true;
       }
 
-
-
-
-
       //check for added abilities
       let all_abilities = await BladesHelpers.getSourcedItemsByType("ability");
       if(all_abilities){
@@ -534,6 +597,7 @@ export class BladesActor extends Actor {
     if(old_playbook_id){
       let old_playbook_name = await BladesHelpers.getPlaybookName(old_playbook_id);
       await this.deleteAbilities(selectedOptions.abilities, old_playbook_name);
+      await this.deleteTraditions(selectedOptions.traditions, old_playbook_name);
       await this.deleteAcquaintances(selectedOptions.acquaintances, old_playbook_name);
       await this.deletePlaybookItems(selectedOptions.playbookitems, old_playbook_name);
       await this.clearGenericItems();
@@ -554,6 +618,7 @@ export class BladesActor extends Actor {
 
     await this.addPlaybookAbilities(new_playbook_name);
     await this.addPlaybookAcquaintances(new_playbook_name);
+    await this.addPlaybookTraditions(new_playbook_name);
     await this.addPlaybookItems(new_playbook_name);
     if(new_playbook_name !== "Ghost"){
       await this.addGenericItems();

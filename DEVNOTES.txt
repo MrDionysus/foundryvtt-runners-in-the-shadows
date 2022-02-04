@@ -69,6 +69,13 @@ Pleasure: Gratification from lovers, food or drink, performance, art, video game
 Stupor: You seek oblivion in the abuse of drugs, drinking to excess, getting beaten to a pulp in mosh pits, BTL experiences, etc.
 Weird: You experiment with mystical substances, consort with tormented spirits, interface with rogue AI, observe strange rituals, etc.
 
+[
+{"attribute":"data.base_skills.prowl","operator":"attribute_change","value":2,"requirement":""},{"attribute":"data.stress.name","operator":"attribute_change","value":"BITD.Drain","requirement":""},
+{"attribute":"data.trauma.name","operator":"attribute_change","value":"BITD.Wear","requirement":""}
+]
+
+MODIFY ENCUMBERENCE LEVEL - see blades-actor-sheet.js, look for mule
+
 1/10:
 - Initial rename of all instances of blades-in-the-dark to runners-in-the-shadows
 - Renamed Insight/Prowess/Resolve to Inuition/Body/Willpower
