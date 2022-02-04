@@ -854,8 +854,6 @@
   position: relative;
   margin: 5px;
   font-family: "Crimson Text", serif;
-  background-image: url(assets/backgrounds/whitetechbackground.png);
-  background-size: auto;
 }
 .runners-in-the-shadows.actor.pc #tidy-redesign input[type=checkbox] {
   width: 1em;
@@ -1755,7 +1753,7 @@
   justify-items: stretch;
   grid-template-columns: 2fr 1em 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "abilities gutter pb-items all-items" "abilities gutter friends all-items" "abilities gutter xp-notes xp-notes";
+  grid-template-areas: "abilities gutter pb-items all-items" "abilities gutter friends all-items" "abilities gutter traditions all-items" "abilities gutter xp-notes xp-notes";
 }
 .runners-in-the-shadows.actor.pc #tidy-redesign .tab-space .tab-content .tab .playbook select {
   font-family: Kirsty, serif;
@@ -1862,6 +1860,11 @@
 }
 .runners-in-the-shadows.actor.pc #tidy-redesign .tab-space .tab-content .tab .playbook .all-items {
   grid-area: all-items;
+}
+.runners-in-the-shadows.actor.pc #tidy-redesign .tab-space .tab-content .tab .playbook .traditions {
+  grid-area: traditions;
+  background: #bbb;
+  font-size: 1.2em;
 }
 .runners-in-the-shadows.actor.pc #tidy-redesign .tab-space .tab-content .tab .playbook .xp-notes {
   grid-area: xp-notes;

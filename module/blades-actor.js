@@ -134,11 +134,11 @@ export class BladesActor extends Actor {
         let lineage = item_data.name;
         updateData = {data : { lineage : lineage}};
         break;        
-      //set the character tradition
-      case "tradition":
-        let tradition = item_data.name;
-        updateData = {data : { tradition : tradition}};
-        break;      
+      //set the character tradition - I THINK I DID THIS WRONG
+      //case "tradition":
+      //  let tradition = item_data.name;
+      //  updateData = {data : { tradition : tradition}};
+      //  break;      
     }
 
     //finalize the updated data
