@@ -254,6 +254,9 @@ export class BladesActorSheet extends BladesSheet {
       loadout += (i.type === "item" && i.data.equipped) ? parseInt(i.data.load) : 0});
     data.data.loadout = loadout;
 
+    let traditions = this.actor.items.filter(item=> item.type == "tradition");
+    data.traditions = traditions;
+
     // Encumbrance Levels
     let load_level=["RITS.Light","RITS.Light","RITS.Light","RITS.Light","RITS.Normal","RITS.Normal","RITS.Heavy","RITS.Encumbered",
 			"RITS.Encumbered","RITS.Encumbered","RITS.OverMax"];
@@ -542,11 +545,12 @@ export class BladesActorSheet extends BladesSheet {
       return ability.update({data: {purchased : checkbox.checked}});
     });
 
-    html.find('.tradition-block .main-checkbox').change(ev => {
-      let checkbox = ev.target;
-      let traditionId = checkbox.closest(".tradition-block").dataset.traditionId;
-      let tradition = this.actor.items.get(traditionId);
-      return tradition.update({data: {purchased : checkbox.checked}});
+    html.find('.tradition .main-checkbox').change(ev => {
+      let checkbox = ev.currentTarget;
+      let parent = $(checkbox).closest(".tradition");
+      let traditionId = parent.data("tradition");
+      let tradition = this.actor.getEmbeddedDocument('Item', traditionId);
+      return tradition.update({data: {equipped : checkbox.checked}});
     });
 
     //this could probably be cleaner. Numbers instead of text would be fine, but not much easier, really.
