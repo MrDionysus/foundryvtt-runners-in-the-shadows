@@ -254,6 +254,9 @@ export class BladesActorSheet extends BladesSheet {
       loadout += (i.type === "item" && i.data.equipped) ? parseInt(i.data.load) : 0});
     data.data.loadout = loadout;
 
+    let traditions = this.actor.items.filter(item=> item.type == "tradition");
+    data.traditions = traditions;
+
     // Encumbrance Levels
     let load_level=["RITS.Light","RITS.Light","RITS.Light","RITS.Light","RITS.Normal","RITS.Normal","RITS.Heavy","RITS.Encumbered",
 			"RITS.Encumbered","RITS.Encumbered","RITS.OverMax"];
