@@ -545,11 +545,12 @@ export class BladesActorSheet extends BladesSheet {
       return ability.update({data: {purchased : checkbox.checked}});
     });
 
-    html.find('.tradition-block .main-checkbox').change(ev => {
-      let checkbox = ev.target;
-      let traditionId = checkbox.closest(".tradition-block").dataset.traditionId;
-      let tradition = this.actor.items.get(traditionId);
-      return tradition.update({data: {purchased : checkbox.checked}});
+    html.find('.tradition .main-checkbox').change(ev => {
+      let checkbox = ev.currentTarget;
+      let parent = $(checkbox).closest(".tradition");
+      let traditionId = parent.data("tradition");
+      let tradition = this.actor.getEmbeddedDocument('Item', traditionId);
+      return tradition.update({data: {equipped : checkbox.checked}});
     });
 
     //this could probably be cleaner. Numbers instead of text would be fine, but not much easier, really.
