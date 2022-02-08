@@ -21,6 +21,7 @@
       "playbook": "",
       "acquaintances": [],
       "acquaintances_label": "RITS.Acquaintances",
+      "traditions_label": "RITS.Traditions",
       "edge": {
         "value": [
           0

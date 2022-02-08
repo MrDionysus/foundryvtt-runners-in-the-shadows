@@ -257,5 +257,8 @@
 
   "RITS.Name": "Name",
   "RITS.CampaignName": "Campaign Name",
-  "RITS.Traditions": "Traditions"
+  "RITS.Traditions": "Traditions",
+  "RITS.AdeptTraditions": "Adept Ways & Drawbacks",
+  "RITS.MageTraditions": "Arcane Methods & Drawbacks",
+  "RITS.TechnoTraditions": "Emergent Methods & Drawbacks"
 }

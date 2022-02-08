@@ -138,7 +138,8 @@
             {{/if}}
             </section>
             <section class="traditions">
-              <header class="full-bar">{{localize "RITS.Traditions"}}</header>
+              {{#if traditions}}
+              <header class="full-bar">{{localize data.traditions_label}}</header>
               {{#each traditions as |tradition|}}
                 <div class="tradition" data-tradition="{{tradition.id}}">
                   <input type="checkbox" class="item-checkbox main-checkbox {{#if (eq tradition.data.load "0")}}free-item{{/if}}" id="character-{{actor._id}}-item-{{tradition._id}}-1" {{checked tradition.data.data.equipped}}><!--
@@ -147,6 +148,7 @@
                   <label class="item-name  {{#if (eq tradition.data.load "0")}}free-item{{/if}} {{#if actor.flags.runners-in-the-shadows.allow-edit}}clickable-edit{{/if}}" for="character-{{actor._id}}-item-{{tradition._id}}-1" title="{{tradition.data.data.description}}">{{tradition.name}}</label>{{#if actor.flags.runners-in-the-shadows.allow-edit}}<a class="tradition-delete delete-button" data-type="item" data-id="{{tradition._id}}"><i class="fas fa-trash"></i></a>{{/if}}
                 </div>
               {{/each}}
+              {{/if}}
             </section>
             <section class="all-items item-list">
               <header class="full-bar">&nbsp;</header>
