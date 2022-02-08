@@ -137,6 +137,13 @@
       "system": "runners-in-the-shadows",
       "path": "./packs/npcs.db",
       "entity": "Actor"
+    },
+    {
+      "name": "tradition",
+      "label": "Traditions",
+      "system": "runners-in-the-shadows",
+      "path": "./packs/traditions.db",
+      "entity": "Item"
     }
   ]
 }

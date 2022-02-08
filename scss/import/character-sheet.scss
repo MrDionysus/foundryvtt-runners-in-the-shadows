@@ -647,6 +647,7 @@
           grid-template-areas:
               "abilities gutter pb-items all-items"
               "abilities gutter friends all-items"
+              "abilities gutter traditions all-items"
               "abilities gutter xp-notes xp-notes";
 
           select{
@@ -774,6 +775,13 @@
 
           .all-items{
             grid-area: all-items;
+          }
+
+          .traditions{
+            grid-area: traditions;
+            background: $lightgray;
+
+            font-size: 1.2em;
           }
 
           .xp-notes{

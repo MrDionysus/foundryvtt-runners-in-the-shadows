@@ -256,5 +256,9 @@
   "RITS.EffectWarning": "Managing Active Effects within an Owned Item is not currently supported by FoundryVTT and will be added in a subsequent update.",
 
   "RITS.Name": "Name",
-  "RITS.CampaignName": "Campaign Name"
+  "RITS.CampaignName": "Campaign Name",
+  "RITS.Traditions": "Traditions",
+  "RITS.AdeptTraditions": "Adept Ways & Drawbacks",
+  "RITS.MageTraditions": "Arcane Methods & Drawbacks",
+  "RITS.TechnoTraditions": "Emergent Methods & Drawbacks"
 }
